@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CHAMADA BOOTSTRAP -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+    <!-- CHAMADA GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <!-- TITULO DO DOCUMENTO -->
+    <title>SPRINT 4 WEB | Arena de Robôs</title>
+</head>
+
+<body>
+<!-- MUSICA DE FUNDO -->
+    <audio id="gameMusic" loop>
+        <source src="./misc/musicaDoRobo.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+<!-- TELA INICIAL COM BOTAO INICIAR -->
+    <div id="startScreen" class="start-screen">
+        <button id="startButton" class="start-button">Iniciar</button>
+    </div>
+
+<!-- TITULO DA PAGINA -->
+    <h1 class="text-center text-light mt-2"><span class="span-rosa">SPRINT 4</span></h1>
+
+<!-- ROBOS DOS JOGADORES E ARENA -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 text-center text-light bg-dark p-3 rounded">
+<!-- CONTAINER DO ROBO DO JOGADOR 1 -->
+                <p class="txt-jogador">Robô I</p>
+                <p class="text-white"><span class="span-rosa">(</span>Flechas Direcionais<span class="span-rosa">)</span> </p>
+                <hr class="linha">
+                <p id="robo1Life" class="h4">Vida:<span class="span-rosa">100</span></p>
+                <hr class="linha">
+                <p>Escolha seu Robô:</p>
+                <div class="robo-skins">
+<!-- SKINS DO ROBO DO JOGADOR 1 -->
+                    <img src="./imgs/robo1.png" onclick="updateRoboImage('robo1', this.src)" class="skin" alt="Robô 1 - Imagem 1">
+                    <img src="./imgs/robo2.png" onclick="updateRoboImage('robo1', this.src)" class="skin" alt="Robô 1 - Imagem 2">
+                    <img src="./imgs/robo3.png" onclick="updateRoboImage('robo1', this.src)" class="skin" alt="Robô 1 - Imagem 3">
+                    <img src="./imgs/robo4.png" onclick="updateRoboImage('robo1', this.src)" class="skin" alt="Robô 1 - Imagem 4">
+                </div>
+            </div>
+<!-- ARENA DE BATALHA -->
+            <div class="col-md-6 p-0">
+                <div id="arena" class="m-auto">
+                    <img src="./imgs/robo1.png" id="robo1" class="robo" style="top: 1px; left: 0px;">
+                    <img src="./imgs/robo2.png" id="robo2" class="robo" style="top: 540px; left: 690px;">
+                    <img src="./imgs/FIAPlogo.png" id="arena-logo" class="arena-logo">
+                </div>
+            </div>
+            <div class="col-md-3 text-center text-light bg-dark p-3 rounded">
+<!-- CONTAINER DO ROBO DO JOGADOR 2 -->
+                <p class="txt-jogador">Robô II</p>
+                <p class="text-white"><span class="span-rosa">(</span>W A S D<span class="span-rosa">)</span> </p>
+                <hr class="linha">
+                <p id="robo2Life" class="h4">Vida:<span class="span-rosa">100</span></p>
+                <hr class="linha">
+                <p>Escolha seu Robô:</p>
+                <div class="robo-skins">
+<!-- SKINS DO ROBO DO JOGADOR 2 -->
+                    <img src="./imgs/robo1.png" onclick="updateRoboImage('robo2', this.src)" class="skin" alt="Robô 2 - Imagem 1">
+                    <img src="./imgs/robo2.png" onclick="updateRoboImage('robo2', this.src)" class="skin" alt="Robô 2 - Imagem 2">
+                    <img src="./imgs/robo3.png" onclick="updateRoboImage('robo2', this.src)" class="skin" alt="Robô 2 - Imagem 3">
+                    <img src="./imgs/robo4.png" onclick="updateRoboImage('robo2', this.src)" class="skin" alt="Robô 2 - Imagem 4">
+                </div>                
+            </div>
+        </div>
+    </div>
+    
+<!-- FOOTER -->
+    <h1 class="text-center texto-intro mt-2">1SIR <span class="text-white">-</span> WEB STANDARDS <span class="text-white">- <span class="span-rosa">Guilherme Cavalcanti</span> -</span> 2023</h1>
+
+<!-- CHAMADA JAVASCRIPT -->
+    <script src="./js/game.js"></script>
+</body>
+
+</html>

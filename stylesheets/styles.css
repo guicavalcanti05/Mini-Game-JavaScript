@@ -1,0 +1,113 @@
+/* ESTILOS GERAIS  */
+body, html {
+    margin: 0;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    font-family: 'Pixelify Sans', sans-serif;
+    overflow: hidden;
+}
+
+/* ESTILOS PARA O MENU DE INICIAR O JOGO */
+.start-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+.start-button {
+    padding: 20px 40px;
+    font-size: 100px;
+    cursor: pointer;    
+    background-color: #ed145b;
+    border-radius: 50px;
+}
+
+/* ESTILOS PARA A ARENA DE BATALHA */
+#arena {
+    position: relative;
+    width: 750px; /* Você pode precisar ajustar isso para tornar responsivo com Bootstrap */
+    height: 600px;
+    border: 5px solid #ed145b;
+    background-color: #616161;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 5px;  /* Arredondando as bordas da arena */
+    margin: auto; /* Centraliza a arena se necessário */
+}
+
+/* ESTILOS PARA OS ROBOS DOS JOGADORES */
+.robo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    transition: top 0.1s, left 0.1s;
+    z-index: 2; 
+}
+
+.txt-jogador {
+    font-size: 3rem;
+}
+
+/* ESTILOS PARA A SELEÇÃO DE SKINS */
+.skin {
+    width: 100px; 
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 10px;
+    transition: border-color 1s ease;
+}
+
+/* ESTILOS MISC */
+.linha {
+    background-color: #ed145b;
+}
+.span-rosa {
+    color: #ed145b;
+}
+.skin:hover {
+    border-color: #ed145b;
+    border-radius: 20px;
+}
+.roboArena {
+    max-width: 15%;
+    height: auto;
+}
+.texto-intro {
+    color: #ed145b;
+    font-size: 1rem;
+    padding-top: 0.5rem;
+}
+
+/* ESTILOS DA LOGO FIAP DENTRO DA ARENA */
+.arena-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+    max-width: 50%; 
+    height: auto;
+}
+
+/* ESCONDER A BARRA DE ROLAGEM DO SITE */
+html {
+    overflow-y: scroll; 
+}
+body::-webkit-scrollbar {
+    width: 0.2em;
+}
+body::-webkit-scrollbar, 
+body::-webkit-scrollbar-thumb {
+    background: transparent; 
+}
+body {
+    overflow: -moz-scrollbars-none; 
+    -ms-overflow-style: none; 
+}
