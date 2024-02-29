@@ -1,1 +1,1 @@
-A project created in my first year of the college, using HTML,CSS and JavaScript.Its objective is to present the annual project in the first year of my college, the construction of a bluetooth-controlled robot and show a idea of a startup and show the idea of ​​a startup that my group and I created. I hope you like the website.
+A project created in my first year of the college, using HTML,CSS and JavaScript.
